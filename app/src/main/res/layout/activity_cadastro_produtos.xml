@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroProdutos">
+    android:background="@color/yellow"
+    tools:context=".CadastroProdutosActivity">
 
     <TextView
         android:id="@+id/nomeLogo"
@@ -41,6 +42,7 @@
         android:hint="Name"
         android:inputType="text"
         android:textStyle="italic"
+        android:textColorHint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
@@ -54,8 +56,9 @@
         android:layout_height="63dp"
         android:ems="10"
         android:hint="Quantidade"
-        android:inputType="text"
+        android:inputType="number"
         android:textStyle="italic"
+        android:textColorHint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
@@ -69,8 +72,10 @@
         android:layout_height="63dp"
         android:ems="10"
         android:hint="Preço"
-        android:inputType="number"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
         android:textStyle="italic"
+        android:textColorHint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
@@ -93,11 +98,12 @@
         android:id="@+id/btnCadastro"
         android:layout_width="144dp"
         android:layout_height="63dp"
-        android:text="Enviar"
-        android:textSize="24dp"
+        android:backgroundTint="@color/red"
         android:fontFamily="@font/chewy"
-        android:backgroundTint="@color/yellow"
-        android:textColor="@color/red"
+        android:onClick="inserir"
+        android:text="Inseir"
+        android:textColor="@color/yellow"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.208"
@@ -109,19 +115,16 @@
         android:id="@+id/btnListar"
         android:layout_width="144dp"
         android:layout_height="63dp"
-        android:text="Listar"
-        android:textSize="24dp"
+        android:backgroundTint="@color/red"
         android:fontFamily="@font/chewy"
-        android:backgroundTint="@color/yellow"
-        android:textColor="@color/red"
+        android:onClick="listar"
+        android:text="Listar"
+        android:textColor="@color/yellow"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.628" />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

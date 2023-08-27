@@ -38,6 +38,6 @@ public class MainActivity extends AppCompatActivity implements Runnable{
 
         }
         finish();
-        startActivity(new Intent(this, CadastroProdutos.class));
+        startActivity(new Intent(this, CadastroProdutosActivity.class));
     }
 }
