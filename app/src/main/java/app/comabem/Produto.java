@@ -8,15 +8,16 @@ public class Produto {
     private String nome;
     private int quantidade;
     private Double preco;
-
+    private byte[] foto;
 
     public Produto() {
     }
 
-    public Produto(String nome, int quantidade, Double preco) {
+    public Produto(String nome, int quantidade, Double preco, byte[] foto) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
+        this.foto = foto;
     }
 
     public String getNome() {
@@ -49,6 +50,14 @@ public class Produto {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
     }
 
     @Override
